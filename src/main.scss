@@ -1,0 +1,9 @@
+@use 'vuetify/styles' with (
+  $body-font-family: 'Arial',
+  $typography: (
+    'button': (
+      'text-transform': none
+    )
+  )
+);
+// @use 'vuetify/lib/components/VBtn/VBtn';
