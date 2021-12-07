@@ -1,10 +1,6 @@
 @use 'vuetify/styles' with (
   $body-font-family: 'Arial',
-  $typography: (
-    'button': (
-      'text-transform': none
-    )
-  ),
   $button-height: 96px,
-  $field-font-size: 0.875rem
+    $icon-size: 2rem,
+    $field-font-size: 0.875rem
 );

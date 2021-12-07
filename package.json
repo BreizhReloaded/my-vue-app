@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.2.23",
-    "vuetify": "npm:@vuetify/nightly@3.0.0-next-20211201.0"
+    "vuetify": "npm:@vuetify/nightly@3.0.0-next-20211206.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.10.1",
