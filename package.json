@@ -7,15 +7,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.23",
-    "vuetify": "npm:@vuetify/nightly@3.0.0-next-20211206.0"
+    "pinia": "^2.0.6",
+    "unstorage": "^0.3.3",
+    "vue": "^3.2.26"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.10.1",
-    "@vuetify/vite-plugin": "^1.0.0-alpha.9",
-    "sass": "^1.44.0",
-    "typescript": "^4.4.3",
-    "vite": "2.6.14",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "sass": "^1.45.0",
+    "typescript": "^4.5.4",
+    "vite": "2.7.3",
     "vue-tsc": "^0.29.8"
   }
 }

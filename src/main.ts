@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
-import { vuetify } from './plugins';
+import { pinia } from './plugins';
 import App from './App.vue';
 
 createApp(App)
-    .use(vuetify)
+    .use(pinia)
     .mount('#app');
