@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useDemo } from '../stores';
 
 defineProps<{ msg: string }>();
 
-const count = ref(0);
+const demo = useDemo();
 </script>
 
 <template>
@@ -26,7 +26,12 @@ const count = ref(0);
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <button type="button" @click="demo.increment()">count is: {{ demo.counter }}</button>
+
+  <p>
+    Double count is: {{ demo.doubleCount }}
+  </p>
+
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
