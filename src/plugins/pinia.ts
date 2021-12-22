@@ -4,8 +4,10 @@ import localStorageDriver from 'unstorage/drivers/localstorage';
 
 const pinia = createPinia();
 
-pinia.use(createStoragePlugin({
-  driver: localStorageDriver()
-}));
+// pinia.use(createStoragePlugin({
+//   driver: localStorageDriver()
+// }));
+
+pinia.use(createStoragePlugin());
 
 export default pinia;

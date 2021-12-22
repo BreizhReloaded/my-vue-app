@@ -1,11 +1,9 @@
 import { defineStore } from 'pinia';
-
-interface DemoState {
-  counter: number
-}
+import { defineStoreStorage } from 'unstorage-pinia-plugin';
+import localStorageDriver from 'unstorage/drivers/localstorage';
 
 export const useDemo = defineStore('demo', {
-  state: (): DemoState => ({
+  state: () => ({
     counter: 0
   }),
   getters: {
@@ -16,4 +14,8 @@ export const useDemo = defineStore('demo', {
       this.counter++;
     }
   }
+});
+
+defineStoreStorage('demo', {
+  driver: localStorageDriver({ base: 'here' })
 });
