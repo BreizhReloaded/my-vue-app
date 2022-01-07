@@ -8,6 +8,7 @@ import HelloWorld from './components/HelloWorld.vue';
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <v-btn>Button</v-btn>
+  <v-text-field label="Text Field"></v-text-field>
 </template>
 
 <style>
