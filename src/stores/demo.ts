@@ -1,21 +1,19 @@
+import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
-import { defineStoreStorage } from 'unstorage-pinia-plugin';
 import localStorageDriver from 'unstorage/drivers/localstorage';
 
-export const useDemo = defineStore('demo', {
-  state: () => ({
-    counter: 0
-  }),
-  getters: {
-    doubleCount: (state) => state.counter * 2,
+export const useDemo = defineStore(
+  'demo',
+  () => {
+    const counter = ref(0);
+    const doubleCount = computed(() => counter.value * 2);
+    const increment = () => counter.value++;
+
+    return { counter, doubleCount, increment };
   },
-  actions: {
-    increment() {
-      this.counter++;
+  {
+    unstorage: {
+      driver: localStorageDriver()
     }
   }
-});
-
-defineStoreStorage('demo', {
-  driver: localStorageDriver({ base: 'here' })
-});
+);

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { useDemo } from '../stores';
+import { useDemo, useOther } from '../stores';
 
 defineProps<{ msg: string }>();
 
 const demo = useDemo();
+const other = useOther();
 </script>
 
 <template>
@@ -30,6 +31,10 @@ const demo = useDemo();
 
   <p>
     Double count is: {{ demo.doubleCount }}
+  </p>
+
+  <p>
+    Other count is: {{ other.counter }}
   </p>
 
   <p>
